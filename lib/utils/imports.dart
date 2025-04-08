@@ -23,6 +23,7 @@ export 'package:learning_system/utils/api.dart';
 
 //service imports
 export 'package:learning_system/service/local_storage.dart';
+export 'package:learning_system/service/token.dart';
 
 //components imports
 export 'package:learning_system/components/button.dart';
