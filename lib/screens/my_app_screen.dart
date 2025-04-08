@@ -1,6 +1,6 @@
 import 'package:learning_system/utils/imports.dart';
 
-class MyApp extends GetView<SplashController> {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
