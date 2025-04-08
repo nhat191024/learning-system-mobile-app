@@ -17,6 +17,8 @@ export 'package:learning_system/bindings/login_binding.dart';
 export 'package:learning_system/routes/pages.dart';
 export 'package:learning_system/utils/custom_colors.dart';
 export 'package:learning_system/utils/text.dart';
+export 'package:learning_system/utils/words.dart';
+export 'package:learning_system/utils/images.dart';
 
 //package imports
 export 'dart:convert';
@@ -27,5 +29,4 @@ export 'package:http/http.dart';
 export 'package:get_storage/get_storage.dart' hide Data;
 export 'package:sidebarx/sidebarx.dart';
 export 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-export 'package:shadcn_ui/shadcn_ui.dart';
 export 'package:flutter_native_splash/flutter_native_splash.dart';
