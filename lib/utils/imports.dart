@@ -15,18 +15,24 @@ export 'package:learning_system/bindings/login_binding.dart';
 
 //utils imports
 export 'package:learning_system/routes/pages.dart';
-export 'package:learning_system/utils/custom_colors.dart';
+export 'package:learning_system/utils/app_colors.dart';
 export 'package:learning_system/utils/text.dart';
 export 'package:learning_system/utils/words.dart';
 export 'package:learning_system/utils/images.dart';
+export 'package:learning_system/utils/api.dart';
+
+//service imports
+export 'package:learning_system/service/local_storage.dart';
 
 //components imports
 export 'package:learning_system/components/button.dart';
 export 'package:learning_system/components/field.dart';
+export 'package:learning_system/components/dialog.dart';
 
 //package imports
 export 'dart:convert';
-export 'package:get/get.dart' hide Response, FormData, MultipartFile, HeaderValue;
+export 'package:get/get.dart'
+    hide Response, FormData, MultipartFile, HeaderValue;
 export 'package:flutter_svg/svg.dart';
 // export 'package:flutter_web_plugins/flutter_web_plugins.dart';
 export 'package:http/http.dart';
