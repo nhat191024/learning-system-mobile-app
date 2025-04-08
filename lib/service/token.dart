@@ -9,6 +9,7 @@ class Token {
     }
   }
 
+  //TODO: gonna fix it later lmao
   // static Future<bool> checkToken({bool isLogin = false}) async {
   //   if (StorageService.checkData(key: LocalStorageKeys.token)) {
   //     var url = Uri.parse("${Api.server}token-check");
