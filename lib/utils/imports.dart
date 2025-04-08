@@ -20,6 +20,10 @@ export 'package:learning_system/utils/text.dart';
 export 'package:learning_system/utils/words.dart';
 export 'package:learning_system/utils/images.dart';
 
+//components imports
+export 'package:learning_system/components/button.dart';
+export 'package:learning_system/components/field.dart';
+
 //package imports
 export 'dart:convert';
 export 'package:get/get.dart' hide Response, FormData, MultipartFile, HeaderValue;
