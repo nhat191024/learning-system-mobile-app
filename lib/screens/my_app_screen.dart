@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
       transitionDuration: const Duration(milliseconds: 500),
       theme: ThemeData(
         useMaterial3: false,
-        hintColor: CustomColors.secondaryText,
-        primaryColor: CustomColors.primary,
-        scaffoldBackgroundColor: CustomColors.white,
+        hintColor: AppColors.secondaryText,
+        primaryColor: AppColors.primary,
+        scaffoldBackgroundColor: AppColors.white,
         textTheme: const TextTheme(
           displayLarge: TextStyle(fontFamily: FontStyleTextStrings.regular),
           displayMedium: TextStyle(fontFamily: FontStyleTextStrings.regular),
