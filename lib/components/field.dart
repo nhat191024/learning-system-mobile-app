@@ -31,7 +31,7 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     required this.labelText,
-    this.labelColor = CustomColors.secondaryText,
+    this.labelColor = AppColors.primaryText,
     this.labelSize = 14,
     this.minLines = 1,
     this.maxLines = 1,
@@ -42,7 +42,7 @@ class CustomTextField extends StatelessWidget {
     this.bottomPadding = 0,
     this.border = 5,
     required this.hintText,
-    this.hintTextColor = CustomColors.disable,
+    this.hintTextColor = AppColors.disable,
     required this.errorText,
     required this.isError,
     this.needErrorText = true,
@@ -52,7 +52,7 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.onPress,
     this.isRequire = false,
-    this.backgroundColor = CustomColors.background,
+    this.backgroundColor = AppColors.background,
     this.suffixText,
     this.width,
     this.disable = false,
@@ -106,28 +106,28 @@ class CustomTextField extends StatelessWidget {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(border),
                     borderSide: BorderSide(
-                      color: isError.value ? CustomColors.errorMain : CustomColors.dividers,
+                      color: isError.value ? AppColors.errorMain : AppColors.dividers,
                       width: 1,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: BorderSide(
-                      color: isError.value ? CustomColors.errorMain : CustomColors.dividers,
+                      color: isError.value ? AppColors.errorMain : AppColors.dividers,
                       width: 1,
                     ),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: const BorderSide(
-                      color: CustomColors.errorMain,
+                      color: AppColors.errorMain,
                       width: 1,
                     ),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: const BorderSide(
-                      color: CustomColors.errorMain,
+                      color: AppColors.errorMain,
                       width: 1,
                     ),
                   ),
@@ -137,19 +137,19 @@ class CustomTextField extends StatelessWidget {
                           : null
                       : null,
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: isError.value ? CustomColors.errorMain : CustomColors.primaryText, width: 1),
+                    borderSide: BorderSide(color: isError.value ? AppColors.errorMain : AppColors.primaryText, width: 1),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  filled: backgroundColor == CustomColors.background ? isError.value || disable : true,
+                  filled: backgroundColor == AppColors.background ? isError.value || disable : true,
                   fillColor: disable 
-                      ? CustomColors.disable.withOpacity(0.1)
+                      ? AppColors.disable.withOpacity(0.1)
                       : isError.value 
-                          ? CustomColors.errorLight 
+                          ? AppColors.errorLight 
                           : backgroundColor,
                   suffixIcon: suffixIcon != null ? IconButton(onPressed: onPress, icon: suffixIcon!) : null,
                   suffix: Text(
                     suffixText ?? '',
-                    style: const TextStyle(color: CustomColors.primaryText, fontSize: 16, fontFamily: FontStyleTextStrings.regular),
+                    style: const TextStyle(color: AppColors.primaryText, fontSize: 16, fontFamily: FontStyleTextStrings.regular),
                   ),
                   alignLabelWithHint: true,
                   isDense: true,
@@ -180,7 +180,7 @@ class SearchTextField extends GetView<SearchTextFieldController> {
     required this.textController,
     required this.onSearch,
     this.hintText = 'Search...',
-    this.color = CustomColors.background,
+    this.color = AppColors.background,
     required this.prefixColor,
   });
 
@@ -218,7 +218,7 @@ class SearchTextField extends GetView<SearchTextFieldController> {
                       icon: const Icon(
                         Icons.cancel,
                         size: 20,
-                        color: CustomColors.secondaryText,
+                        color: AppColors.secondaryText,
                       ),
                       onPressed: () {
                         textController.clear();
@@ -229,7 +229,7 @@ class SearchTextField extends GetView<SearchTextFieldController> {
                   : const SizedBox.shrink()),
               hintText: hintText,
               hintStyle: const TextStyle(
-                color: CustomColors.secondaryText,
+                color: AppColors.secondaryText,
               ),
               border: InputBorder.none,
               contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
@@ -286,7 +286,7 @@ class CheckBoxField extends StatelessWidget {
     super.key,
     required this.title,
     required this.value,
-    this.activeColor = CustomColors.primary,
+    this.activeColor = AppColors.primary,
     this.textSize = 14,
     this.fontFamily = FontStyleTextStrings.regular,
     required this.onChanged,
@@ -315,7 +315,7 @@ class CheckBoxField extends StatelessWidget {
                 ),
                 side: const BorderSide(
                   width: 1.5,
-                  color: CustomColors.border,
+                  color: AppColors.border,
                 ),
               ),
             ),
@@ -323,7 +323,7 @@ class CheckBoxField extends StatelessWidget {
           const SizedBox(width: 10),
           Text(
             title,
-            style: TextStyle(fontSize: textSize, color: CustomColors.primaryText, fontFamily: fontFamily),
+            style: TextStyle(fontSize: textSize, color: AppColors.primaryText, fontFamily: fontFamily),
           ),
         ],
       ),
@@ -355,7 +355,7 @@ class SelectBox extends StatelessWidget {
   const SelectBox({
     super.key,
     required this.labelText,
-    this.labelColor = CustomColors.secondaryText,
+    this.labelColor = AppColors.secondaryText,
     this.labelSize = 14,
     this.leftPadding = 20,
     this.rightPadding = 20,
@@ -363,12 +363,12 @@ class SelectBox extends StatelessWidget {
     this.bottomPadding = 0,
     this.border = 5,
     required this.hintText,
-    this.hintTextColor = CustomColors.disable,
+    this.hintTextColor = AppColors.disable,
     required this.errorText,
     required this.isError,
     this.needErrorText = true,
     this.isRequire = false,
-    this.backgroundColor = CustomColors.background,
+    this.backgroundColor = AppColors.background,
     this.width,
     required this.items,
     required this.value,
@@ -424,7 +424,7 @@ class SelectBox extends StatelessWidget {
                 ],
                 onChanged: onChanged,
                 style: const TextStyle(
-                  color: CustomColors.primaryText,
+                  color: AppColors.primaryText,
                   fontSize: 14,
                   fontFamily: FontStyleTextStrings.regular,
                 ),
@@ -435,28 +435,28 @@ class SelectBox extends StatelessWidget {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(border),
                     borderSide: BorderSide(
-                      color: isError.value ? CustomColors.errorMain : CustomColors.dividers,
+                      color: isError.value ? AppColors.errorMain : AppColors.dividers,
                       width: 1,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: BorderSide(
-                      color: isError.value ? CustomColors.errorMain : CustomColors.dividers,
+                      color: isError.value ? AppColors.errorMain : AppColors.dividers,
                       width: 1,
                     ),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: const BorderSide(
-                      color: CustomColors.errorMain,
+                      color: AppColors.errorMain,
                       width: 1,
                     ),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: const BorderSide(
-                      color: CustomColors.errorMain,
+                      color: AppColors.errorMain,
                       width: 1,
                     ),
                   ),
@@ -466,11 +466,11 @@ class SelectBox extends StatelessWidget {
                           : null
                       : null,
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: isError.value ? CustomColors.errorMain : CustomColors.primaryText, width: 1),
+                    borderSide: BorderSide(color: isError.value ? AppColors.errorMain : AppColors.primaryText, width: 1),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  filled: backgroundColor == CustomColors.background ? isError.value : true,
-                  fillColor: isError.value ? CustomColors.errorLight : backgroundColor,
+                  filled: backgroundColor == AppColors.background ? isError.value : true,
+                  fillColor: isError.value ? AppColors.errorLight : backgroundColor,
                 ),
                 icon: const Icon(Icons.arrow_drop_down),
                 isExpanded: true,
@@ -507,7 +507,7 @@ class DateTimeField extends StatelessWidget {
   const DateTimeField({
     super.key,
     required this.labelText,
-    this.labelColor = CustomColors.secondaryText,
+    this.labelColor = AppColors.secondaryText,
     this.labelSize = 14,
     this.leftPadding = 20,
     this.rightPadding = 20,
@@ -515,14 +515,14 @@ class DateTimeField extends StatelessWidget {
     this.bottomPadding = 0,
     this.border = 5,
     required this.hintText,
-    this.hintTextColor = CustomColors.disable,
+    this.hintTextColor = AppColors.disable,
     required this.errorText,
     required this.isError,
     this.needErrorText = true,
     required this.controller,
     required this.onChanged,
     this.isRequire = false,
-    this.backgroundColor = CustomColors.background,
+    this.backgroundColor = AppColors.background,
     this.width,
   });
 
@@ -536,10 +536,10 @@ class DateTimeField extends StatelessWidget {
         return Theme(
           data: Theme.of(context).copyWith(
             colorScheme: const ColorScheme.light(
-              primary: CustomColors.primary,
+              primary: AppColors.primary,
               onPrimary: Colors.white,
               surface: Colors.white,
-              onSurface: CustomColors.primaryText,
+              onSurface: AppColors.primaryText,
             ),
           ),
           child: child!,
@@ -556,16 +556,16 @@ class DateTimeField extends StatelessWidget {
           return Theme(
             data: Theme.of(context).copyWith(
               colorScheme: const ColorScheme.light(
-                primary: CustomColors.primary,
+                primary: AppColors.primary,
                 onPrimary: Colors.white,
                 surface: Colors.white,
-                onSurface: CustomColors.primaryText,
+                onSurface: AppColors.primaryText,
               ),
               timePickerTheme: const TimePickerThemeData(
                 dialBackgroundColor: Colors.white,
-                hourMinuteTextColor: CustomColors.primary,
-                dialHandColor: CustomColors.primary,
-                dialTextColor: CustomColors.primaryText,
+                hourMinuteTextColor: AppColors.primary,
+                dialHandColor: AppColors.primary,
+                dialTextColor: AppColors.primaryText,
               ),
             ),
             child: child!,
@@ -633,28 +633,28 @@ class DateTimeField extends StatelessWidget {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(border),
                     borderSide: BorderSide(
-                      color: isError.value ? CustomColors.errorMain : CustomColors.dividers,
+                      color: isError.value ? AppColors.errorMain : AppColors.dividers,
                       width: 1,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: BorderSide(
-                      color: isError.value ? CustomColors.errorMain : CustomColors.dividers,
+                      color: isError.value ? AppColors.errorMain : AppColors.dividers,
                       width: 1,
                     ),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: const BorderSide(
-                      color: CustomColors.errorMain,
+                      color: AppColors.errorMain,
                       width: 1,
                     ),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
                     borderSide: const BorderSide(
-                      color: CustomColors.errorMain,
+                      color: AppColors.errorMain,
                       width: 1,
                     ),
                   ),
@@ -664,11 +664,11 @@ class DateTimeField extends StatelessWidget {
                           : null
                       : null,
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: isError.value ? CustomColors.errorMain : CustomColors.primaryText, width: 1),
+                    borderSide: BorderSide(color: isError.value ? AppColors.errorMain : AppColors.primaryText, width: 1),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  filled: backgroundColor == CustomColors.background ? isError.value : true,
-                  fillColor: isError.value ? CustomColors.errorLight : backgroundColor,
+                  filled: backgroundColor == AppColors.background ? isError.value : true,
+                  fillColor: isError.value ? AppColors.errorLight : backgroundColor,
                   suffixIcon: const Icon(Icons.access_time),
                 ),
               ),
