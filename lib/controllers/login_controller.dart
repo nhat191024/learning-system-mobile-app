@@ -42,12 +42,12 @@ class LoginController extends GetxController {
         );
         var data = jsonDecode(response.body);
         if (response.statusCode == 200) {
-          // Token.storeToken(data["token"]);
+          Token.storeToken(data["token"]);
           StorageService.writeStringData(key: "username", value: data["name"]);
           StorageService.writeStringData(key: "avatar", value: data["avatar"]);
           StorageService.writeStringData(key: "isLogin", value: "true");
           StorageService.writeStringData(key: "role", value: data["role"]);
-          // Get.offAllNamed(Routes.homePage);
+          Get.offAllNamed(Routes.bottomNav);
         } else if (response.statusCode == 401) {
           Get.dialog(
             const NotificationDialog(
