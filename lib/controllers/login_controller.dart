@@ -12,12 +12,20 @@ class LoginController extends GetxController {
 
   final RxBool isButtonLoading = false.obs;
 
+  @override
+  void onInit() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      if (!await Token.checkToken()) return;
+    });
+    super.onInit();
+  }
+
   void validate() {
     if (username.text.isEmpty) {
       isUsernameError.value = true;
       usernameErrorText.value = "username_error".tr;
     } else {
-      isUsernameError.value = false;
+      isUsernameError.value = false; 
       usernameErrorText.value = "";
     }
 
