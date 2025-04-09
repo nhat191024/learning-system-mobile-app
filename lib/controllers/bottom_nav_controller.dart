@@ -1,10 +1,8 @@
 import 'package:learning_system/utils/imports.dart';
 
 class BottomNavController extends GetxController {
-  final ClassController classController = Get.put(ClassController());
-
   var selectedIndex = 0.obs;
-  final List<Widget> screens = [ClassListScreen()];
+  final List<Widget> screens = [ClassListScreen(), CourseListScreen()];
 
   Widget get currentScreen => screens[selectedIndex.value];
 
