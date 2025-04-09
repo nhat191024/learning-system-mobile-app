@@ -9,32 +9,29 @@ class Token {
     }
   }
 
-  //TODO: gonna fix it later lmao
-  // static Future<bool> checkToken({bool isLogin = false}) async {
-  //   if (StorageService.checkData(key: LocalStorageKeys.token)) {
-  //     var url = Uri.parse("${Api.server}token-check");
-  //     var token = StorageService.readData(key: LocalStorageKeys.token);
-  //     try {
-  //       var response = await get(
-  //         url,
-  //         headers: {"Authorization": "Bearer $token"},
-  //       );
-  //       if (response.statusCode == 200) {
-  //         if (isLogin) Get.offAllNamed(Routes.homePage);
-  //         return true;
-  //       } else {
-  //         if (!isLogin) Get.offAllNamed(Routes.loginPage);
-  //         return false;
-  //       }
-  //     } catch (e) {
-  //       if (!isLogin) Get.offAllNamed(Routes.loginPage);
-  //       return false;
-  //     }
-  //   } else {
-  //     if (!isLogin) Get.offAllNamed(Routes.loginPage);
-  //     return false;
-  //   }
-  // }
+  static Future<bool> checkToken() async {
+    if (StorageService.checkData(key: LocalStorageKeys.token)) {
+      var url = Uri.parse("${Api.server}token-check");
+      var token = StorageService.readData(key: LocalStorageKeys.token);
+      try {
+        var response = await get(
+          url,
+          headers: {"Authorization": "Bearer $token"},
+        );
+
+        if (response.statusCode == 200) {
+          Get.offAllNamed(Routes.bottomNav);
+          return true;
+        }
+
+        return false;
+      } catch (e) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
 
   static storeToken(String token) async {
     if (StorageService.checkData(key: LocalStorageKeys.token)) {
