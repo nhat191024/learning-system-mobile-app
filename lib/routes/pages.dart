@@ -25,5 +25,11 @@ class Pages {
       page: () => ClassListScreen(),
       binding: ClassBinding(),
     ),
+
+    GetPage(
+      name: Routes.courseListScreen,
+      page: () => CourseListScreen(),
+      binding: CourseBinding(),
+    ),
   ];
 }
