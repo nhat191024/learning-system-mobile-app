@@ -6,5 +6,6 @@ class BottomNavBinding extends Bindings {
     Get.lazyPut<BottomNavController>(() => BottomNavController());
     Get.lazyPut<ClassController>(() => ClassController());
     Get.lazyPut<CourseController>(() => CourseController());
+    Get.lazyPut<ProfileController>(() => ProfileController());
   }
 }
