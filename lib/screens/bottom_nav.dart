@@ -15,39 +15,29 @@ class BottomNav extends GetView<BottomNavController> {
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
-                icon:
-                    controller.selectedIndex.value == 0
-                        ? Icon(Icons.home)
-                        : Icon(Icons.home_filled),
-                label: 'home'.tr,
+                icon: Icon(Icons.school_outlined),
+                label: 'class'.tr,
+                activeIcon: Icon(Icons.school),
               ),
               BottomNavigationBarItem(
-                icon:
-                    controller.selectedIndex.value == 1
-                        ? Icon(Icons.home)
-                        : Icon(Icons.home_filled),
-                label: 'Class List',
+                icon: Icon(Icons.book_outlined),
+                label: 'course'.tr,
+                activeIcon: Icon(Icons.book),
               ),
               BottomNavigationBarItem(
-                icon:
-                    controller.selectedIndex.value == 2
-                        ? Icon(Icons.home)
-                        : Icon(Icons.home_filled),
-                label: 'Class List',
+                icon: Icon(Icons.person_outline),
+                label: 'profile'.tr,
+                activeIcon: Icon(Icons.person),
               ),
               BottomNavigationBarItem(
-                icon:
-                    controller.selectedIndex.value == 3
-                        ? Icon(Icons.home)
-                        : Icon(Icons.home_filled),
-                label: 'Class List',
+                icon: Icon(Icons.favorite_outline),
+                label: 'favorite'.tr,
+                activeIcon: Icon(Icons.favorite),
               ),
               BottomNavigationBarItem(
-                icon:
-                    controller.selectedIndex.value == 4
-                        ? Icon(Icons.home)
-                        : Icon(Icons.home_filled),
-                label: 'Class List',
+                icon: Icon(Icons.check_circle_outline),
+                label: 'result'.tr,
+                activeIcon: Icon(Icons.check_circle),
               ),
             ],
             selectedItemColor: AppColors.primary,
