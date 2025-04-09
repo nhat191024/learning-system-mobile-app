@@ -5,7 +5,7 @@ part 'routes.dart';
 class Pages {
   Pages._();
 
-  static const initialRoute = Routes.bottomNav;
+  static const initialRoute = Routes.loginScreen;
 
   static final routes = [
     GetPage(
