@@ -6,12 +6,15 @@ export 'package:flutter/material.dart';
 
 //screen imports
 export 'package:learning_system/screens/login_screen.dart';
+export 'package:learning_system/screens/class_list_screen.dart';
 
 //controller imports
 export 'package:learning_system/controllers/login_controller.dart';
+export 'package:learning_system/controllers/class_controller.dart';
 
 //binding imports
 export 'package:learning_system/bindings/login_binding.dart';
+export 'package:learning_system/bindings/class_binding.dart';
 
 //utils imports
 export 'package:learning_system/routes/pages.dart';
@@ -24,6 +27,10 @@ export 'package:learning_system/utils/api.dart';
 //service imports
 export 'package:learning_system/service/local_storage.dart';
 export 'package:learning_system/service/token.dart';
+export 'package:learning_system/service/class_service.dart';
+
+//model imports
+export 'package:learning_system/models/class_model.dart';
 
 //components imports
 export 'package:learning_system/components/button.dart';
