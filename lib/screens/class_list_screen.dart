@@ -130,12 +130,15 @@ class ClassListScreen extends GetView<ClassController> {
                 if (controller.isLoading.value) {
                   return const Center(child: CircularProgressIndicator());
                 } else if (controller.classList.isEmpty) {
-                  return Center(
-                    child: Text(
-                      'class_list_empty'.tr,
-                      style: TextStyle(
-                        color: AppColors.primaryText,
-                        fontSize: 26,
+                  return Expanded(
+                    child: Center(
+                      child: Text(
+                        'class_list_empty'.tr,
+                        style: TextStyle(
+                          color: AppColors.primaryText,
+                          fontSize: 26,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                   );
