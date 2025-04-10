@@ -61,3 +61,4 @@ export 'package:get_storage/get_storage.dart' hide Data;
 export 'package:sidebarx/sidebarx.dart';
 export 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 export 'package:flutter_native_splash/flutter_native_splash.dart';
+export 'package:flutter/foundation.dart';
