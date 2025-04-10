@@ -21,7 +21,13 @@ class Token {
 
         var message = jsonDecode(response.body)['message'];
 
-        if (response.statusCode == 200 && message == "Token hợp lệ") {
+        if (kDebugMode) {
+          print("Token check:");
+          print("Status code: ${response.statusCode}");
+          print("Message: $message");
+        }
+
+        if (response.statusCode == 200 && message == "Token hợp lệ.") {
           Get.offAllNamed(Routes.bottomNav);
           return true;
         }
