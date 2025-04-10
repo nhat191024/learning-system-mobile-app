@@ -11,7 +11,7 @@ class Token {
 
   static Future<bool> checkToken() async {
     if (StorageService.checkData(key: LocalStorageKeys.token)) {
-      var url = Uri.parse("${Api.server}token-check");
+      var url = Uri.parse("${Api.server}token");
       var token = StorageService.readData(key: LocalStorageKeys.token);
       try {
         var response = await get(
@@ -19,7 +19,9 @@ class Token {
           headers: {"Authorization": "Bearer $token"},
         );
 
-        if (response.statusCode == 200) {
+        var message = jsonDecode(response.body)['message'];
+
+        if (response.statusCode == 200 && message == "Token hợp lệ") {
           Get.offAllNamed(Routes.bottomNav);
           return true;
         }
