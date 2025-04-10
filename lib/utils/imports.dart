@@ -42,6 +42,7 @@ export 'package:learning_system/service/token.dart';
 
 //model imports
 export 'package:learning_system/models/class_model.dart';
+export 'package:learning_system/models/class_detail_model.dart';
 export 'package:learning_system/models/course_model.dart';
 export 'package:learning_system/models/profile_model.dart';
 
