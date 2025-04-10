@@ -318,7 +318,7 @@ class ProfileScreen extends GetView<ProfileController> {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center, 
                             children: [
                               Icon(
                                 Icons.date_range,
