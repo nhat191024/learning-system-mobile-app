@@ -27,6 +27,12 @@ class Pages {
     ),
 
     GetPage(
+      name: Routes.classDetailScreen,
+      page: () => ClassDetailScreen(),
+      binding: ClassDetailBinding(),
+    ),
+
+    GetPage(
       name: Routes.courseListScreen,
       page: () => CourseListScreen(),
       binding: CourseBinding(),
