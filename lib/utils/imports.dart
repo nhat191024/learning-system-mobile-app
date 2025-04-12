@@ -11,6 +11,7 @@ export 'package:learning_system/screens/class_list_screen.dart';
 export 'package:learning_system/screens/class_detail_screen.dart';
 export 'package:learning_system/screens/class_detail/overview_screen.dart';
 export 'package:learning_system/screens/class_detail/assignment_screen.dart';
+export 'package:learning_system/screens/class_detail/point_screen.dart';
 export 'package:learning_system/screens/course_list_screen.dart';
 export 'package:learning_system/screens/profile_screen.dart';
 
