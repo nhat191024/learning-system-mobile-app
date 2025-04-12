@@ -240,9 +240,17 @@ class ClassListScreen extends GetView<ClassController> {
                 ),
               ),
               CustomButton(
-                onTap: () {},
+                onTap: () {
+                  if (joined) {
+                    Get.toNamed(
+                      Routes.classDetailScreen,
+                      arguments: {'classId': 1},
+                    );
+                  }
+                },
                 btnText: joined ? 'detail'.tr : 'join'.tr,
                 height: 40,
+                isDisabled: !joined,
               ),
             ],
           ),
