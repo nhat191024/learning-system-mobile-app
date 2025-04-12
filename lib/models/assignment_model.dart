@@ -7,6 +7,7 @@ class AssignmentModel {
   String? startDate;
   String? dueDate;
   String? status;
+  bool? isDue;
   bool? isSubmitted;
 
   AssignmentModel({
@@ -18,6 +19,7 @@ class AssignmentModel {
     required this.startDate,
     required this.dueDate,
     required this.status,
+    required this.isDue,
     required this.isSubmitted,
   });
 
@@ -31,6 +33,7 @@ class AssignmentModel {
       'startDate': startDate,
       'dueDate': dueDate,
       'status': status,
+      'isDue': isDue,
       'isSubmitted': isSubmitted,
     };
   }
@@ -44,6 +47,7 @@ class AssignmentModel {
     startDate = map['startDate'];
     dueDate = map['dueDate'];
     status = map['status'];
+    isDue = map['isDue'];
     isSubmitted = map['isSubmitted'];
   }
 }
