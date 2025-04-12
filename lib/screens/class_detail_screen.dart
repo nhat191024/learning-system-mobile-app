@@ -71,7 +71,7 @@ class ClassDetailScreen extends GetView<ClassDetailController> {
                         children: [
                           OverviewScreen(),
                           AssignmentScreen(),
-                          OverviewScreen(), //waiting for points screen
+                          PointScreen(),
                         ],
                       );
                     }
