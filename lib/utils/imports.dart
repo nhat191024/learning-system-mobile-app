@@ -46,6 +46,7 @@ export 'package:learning_system/models/class_model.dart';
 export 'package:learning_system/models/class_detail_model.dart';
 export 'package:learning_system/models/course_model.dart';
 export 'package:learning_system/models/profile_model.dart';
+export 'package:learning_system/models/assignment_model.dart';
 
 //components imports
 export 'package:learning_system/components/button.dart';
