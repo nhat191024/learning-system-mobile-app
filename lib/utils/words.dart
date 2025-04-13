@@ -43,6 +43,11 @@ class Words extends Translations {
       'm': 'm',
       'overdue': 'Overdue',
 
+      //do assignment screen
+      'Candidate': 'Candidate',
+      'time_left': 'Time left',
+      'submit': 'Submit',
+
       //course list screen
       'course_list': 'Course List',
       'course_list_empty': 'No course found',
@@ -97,6 +102,11 @@ class Words extends Translations {
       'duration': 'Thời gian',
       'm': 'p',
       'overdue': 'Quá hạn',
+
+      //do assignment screen
+      'Candidate': 'Thí sinh',
+      'time_left': 'Thời gian còn lại',
+      'submit': 'Nộp bài',
 
       //course list screen
       'course_list': 'Danh sách khoá học',
