@@ -51,6 +51,8 @@ export 'package:learning_system/models/profile_model.dart';
 export 'package:learning_system/models/assignment_model.dart';
 export 'package:learning_system/models/class_notification_model.dart';
 export 'package:learning_system/models/assignment_point_model.dart';
+export 'package:learning_system/models/question_model.dart';
+export 'package:learning_system/models/answer_model.dart';
 
 //components imports
 export 'package:learning_system/components/button.dart';
