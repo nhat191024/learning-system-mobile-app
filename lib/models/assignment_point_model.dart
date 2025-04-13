@@ -4,6 +4,7 @@ class AssignmentPointModel {
   String? dueDate;
   int? point;
   int? totalPoint;
+  String? handedDate;
   bool? handedIn;
 
   AssignmentPointModel({
@@ -12,6 +13,7 @@ class AssignmentPointModel {
     this.dueDate,
     this.point,
     this.totalPoint,
+    this.handedDate,
     this.handedIn,
   });
 
@@ -22,6 +24,7 @@ class AssignmentPointModel {
       'dueDate': dueDate,
       'point': point,
       'totalPoint': totalPoint,
+      'handedDate': handedDate,
       'handedIn': handedIn,
     };
   }
@@ -32,6 +35,7 @@ class AssignmentPointModel {
     dueDate = map['dueDate'];
     point = map['score'];
     totalPoint = map['total_score'];
+    handedDate = map['handed_date'];
     handedIn = map['handed_in'];
   }
 }
