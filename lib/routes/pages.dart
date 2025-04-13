@@ -37,5 +37,11 @@ class Pages {
       page: () => CourseListScreen(),
       binding: CourseBinding(),
     ),
+
+    GetPage(
+      name: Routes.doAssignment,
+      page: () => DoAssignmentScreen(),
+      binding: DoAssignmentBinding(),
+    ),
   ];
 }
