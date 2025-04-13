@@ -152,6 +152,7 @@ class DoAssignmentController extends GetxController {
     try {
       isLoading(true);
 
+      //notify user if time is not up and not all questions are answered
       if (!isTimeUp && !checkAllAnswered()) {
         Get.dialog(
           NotificationDialogWithCustomButton(
@@ -160,6 +161,21 @@ class DoAssignmentController extends GetxController {
             btnText: 'submit'.tr,
             btnColor: AppColors.errorMain,
             onTap: () {
+              Get.back();
+              submitAssignment(isTimeUp: true);
+            },
+          ),
+        );
+        return;
+      } else if (!isTimeUp) {
+        Get.dialog(
+          NotificationDialogWithCustomButton(
+            title: 'note'.tr,
+            message: 'submit_confirm_1'.tr,
+            btnText: 'submit'.tr,
+            btnColor: AppColors.errorMain,
+            onTap: () {
+              Get.back();
               submitAssignment(isTimeUp: true);
             },
           ),
