@@ -51,6 +51,7 @@ class Words extends Translations {
       'time_up': 'Time is up!',
       'time_up_message': 'System will submit your assignment automatically in 3 seconds. Please wait...',
       'submit_confirm': "You haven't finished your assignment yet, are you sure you want to submit it?",
+      'submit_confirm_1': 'Are you sure you want to submit it?',
 
       //point screen
       'handed_date': 'Handed date',
@@ -119,6 +120,7 @@ class Words extends Translations {
       'time_up': 'Hết thời gian!',
       'time_up_message': 'Hệ thống sẽ tự động nộp bài của bạn trong 3 giây. Vui lòng chờ...',
       'submit_confirm': 'Bạn chưa hoàn thành bài làm, bạn có chắc chắn muốn nộp bài không?',
+      'submit_confirm_1': 'Bạn có chắc chắn muốn nộp bài không?',
 
       //point screen
       'handed_date': 'Ngày nộp',
