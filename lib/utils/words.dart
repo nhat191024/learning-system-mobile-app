@@ -48,6 +48,11 @@ class Words extends Translations {
       'time_left': 'Time left',
       'submit': 'Submit',
 
+      //point screen
+      'handed_date': 'Handed date',
+      'not_handed': 'Not handed',
+      'point': 'Point',
+
       //course list screen
       'course_list': 'Course List',
       'course_list_empty': 'No course found',
@@ -107,6 +112,11 @@ class Words extends Translations {
       'Candidate': 'Thí sinh',
       'time_left': 'Thời gian còn lại',
       'submit': 'Nộp bài',
+
+      //point screen
+      'handed_date': 'Ngày nộp',
+      'not_handed': 'Chưa nộp',
+      'point': 'Điểm',
 
       //course list screen
       'course_list': 'Danh sách khoá học',
