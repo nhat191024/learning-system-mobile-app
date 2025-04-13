@@ -39,7 +39,12 @@ class PointScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 10),
                           Text(
-                            "Due ${controller.studentPointList[index].dueDate}",
+                            "${'due'.tr}: ${controller.studentPointList[index].dueDate}",
+                            style: const TextStyle(fontSize: 16, color: AppColors.primaryTextLight),
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            "${'handed_date'.tr}: ${controller.studentPointList[index].handedDate ?? 'not_handed'.tr}",
                             style: const TextStyle(fontSize: 16, color: AppColors.primaryTextLight),
                           ),
                         ],
@@ -47,7 +52,7 @@ class PointScreen extends StatelessWidget {
                       if (controller.studentPointList[index].type == "quiz") ...[
                         const Spacer(),
                         Text(
-                          "${controller.studentPointList[index].point} / ${controller.studentPointList[index].totalPoint}",
+                          "${'point'.tr} ${controller.studentPointList[index].point} / ${controller.studentPointList[index].totalPoint}",
                           style: const TextStyle(
                             fontSize: 18,
                             color: AppColors.primaryTextLight,
