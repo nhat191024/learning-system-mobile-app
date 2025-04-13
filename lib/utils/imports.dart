@@ -11,6 +11,7 @@ export 'package:learning_system/screens/class_list_screen.dart';
 export 'package:learning_system/screens/class_detail_screen.dart';
 export 'package:learning_system/screens/class_detail/overview_screen.dart';
 export 'package:learning_system/screens/class_detail/assignment_screen.dart';
+export 'package:learning_system/screens/do_assignment_screen.dart';
 export 'package:learning_system/screens/class_detail/point_screen.dart';
 export 'package:learning_system/screens/course_list_screen.dart';
 export 'package:learning_system/screens/profile_screen.dart';
@@ -22,6 +23,7 @@ export 'package:learning_system/controllers/class_detail_controller.dart';
 export 'package:learning_system/controllers/bottom_nav_controller.dart';
 export 'package:learning_system/controllers/course_controller.dart';
 export 'package:learning_system/controllers/profile_controller.dart';
+export 'package:learning_system/controllers/do_assignment_controller.dart';
 
 //binding imports
 export 'package:learning_system/bindings/login_binding.dart';
@@ -30,6 +32,7 @@ export 'package:learning_system/bindings/class_detail_binding.dart';
 export 'package:learning_system/bindings/bottom_nav_binding.dart';
 export 'package:learning_system/bindings/course_binding.dart';
 export 'package:learning_system/bindings/profile_binding.dart';
+export 'package:learning_system/bindings/do_assignment_binding.dart';
 
 //utils imports
 export 'package:learning_system/routes/pages.dart';
