@@ -112,7 +112,13 @@ class DoAssignmentController extends GetxController {
     _timer = Timer.periodic(duration, (Timer timer) {
       if (remainingSeconds == 0) {
         timer.cancel();
-        Get.snackbar('Time is up', 'System will submit your assignment automatically');
+        Get.dialog(
+          NotificationDialogWithoutButton(title: 'time_up'.tr, message: 'time_up_message'.tr),
+        );
+        Future.delayed(const Duration(seconds: 3), () {
+          Get.back();
+          submitAssignment(isTimeUp: true);
+        });
       } else {
         remainingSeconds--;
         int hours = remainingSeconds ~/ 3600;
@@ -149,8 +155,8 @@ class DoAssignmentController extends GetxController {
       if (!isTimeUp && !checkAllAnswered()) {
         Get.dialog(
           NotificationDialogWithCustomButton(
-            title: 'Lưu ý!',
-            message: 'Ban chưa hoàn thành bài làm, bạn có chắc chắn muốn nộp bài không?',
+            title: 'note'.tr,
+            message: 'submit_confirm'.tr,
             btnText: 'submit'.tr,
             btnColor: AppColors.errorMain,
             onTap: () {
