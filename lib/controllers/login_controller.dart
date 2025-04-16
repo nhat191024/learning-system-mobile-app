@@ -25,7 +25,7 @@ class LoginController extends GetxController {
       isUsernameError.value = true;
       usernameErrorText.value = "username_error".tr;
     } else {
-      isUsernameError.value = false; 
+      isUsernameError.value = false;
       usernameErrorText.value = "";
     }
 
@@ -44,10 +44,7 @@ class LoginController extends GetxController {
       var url = Uri.parse("${Api.server}login");
       try {
         isButtonLoading.value = true;
-        var response = await post(
-          url,
-          body: {"login": username.text, "password": password.text},
-        );
+        var response = await post(url, body: {"login": username.text, "password": password.text});
         var data = jsonDecode(response.body);
         if (response.statusCode == 200) {
           Token.storeToken(data["token"]);
