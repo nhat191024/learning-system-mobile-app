@@ -17,9 +17,15 @@ class ClassDetailScreen extends GetView<ClassDetailController> {
                 child: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+                        IconButton(
+                          icon: const Icon(Icons.arrow_back, color: AppColors.primaryText),
+                          onPressed: () {
+                            Get.back();
+                          },
+                        ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: Text(
@@ -32,17 +38,13 @@ class ClassDetailScreen extends GetView<ClassDetailController> {
                             ),
                           ),
                         ),
-                        const Spacer(),
                       ],
                     ),
                     TabBar(
                       controller: controller.tabController,
                       labelColor: AppColors.primary,
                       unselectedLabelColor: Colors.black,
-                      labelStyle: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      labelStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       unselectedLabelStyle: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
@@ -68,11 +70,7 @@ class ClassDetailScreen extends GetView<ClassDetailController> {
                     } else {
                       return TabBarView(
                         controller: controller.tabController,
-                        children: [
-                          OverviewScreen(),
-                          AssignmentScreen(),
-                          PointScreen(),
-                        ],
+                        children: [OverviewScreen(), AssignmentScreen(), PointScreen()],
                       );
                     }
                   }),
