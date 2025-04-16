@@ -29,16 +29,6 @@ class BottomNav extends GetView<BottomNavController> {
                 label: 'profile'.tr,
                 activeIcon: Icon(Icons.person),
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_outline),
-                label: 'favorite'.tr,
-                activeIcon: Icon(Icons.favorite),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.check_circle_outline),
-                label: 'result'.tr,
-                activeIcon: Icon(Icons.check_circle),
-              ),
             ],
             selectedItemColor: AppColors.primary,
             unselectedItemColor: AppColors.disable,
