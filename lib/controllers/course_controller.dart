@@ -31,10 +31,7 @@ class CourseController extends GetxController {
 
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body);
-        courseList.value =
-            (data['courses'] as List)
-                .map((e) => CourseModel.fromJson(e))
-                .toList();
+        courseList.value = (data['courses'] as List).map((e) => CourseModel.fromJson(e)).toList();
       }
     } finally {
       isLoading.value = false;
@@ -49,17 +46,45 @@ class CourseController extends GetxController {
         filteredList.value =
             courseList
                 .where(
-                  (element) =>
-                      (element.name?.toLowerCase().contains(
-                            query.toLowerCase(),
-                          ) ??
-                          false),
+                  (element) => (element.name?.toLowerCase().contains(query.toLowerCase()) ?? false),
                 )
                 .toList();
         isSearching.value = true;
       } else {
         filteredList.value = courseList;
         isSearching.value = false;
+      }
+    } finally {
+      isLoading.value = false;
+    }
+  }
+
+  joinCourse(int id) async {
+    try {
+      isLoading.value = true;
+      String url = "${Api.testServer}courses/join/$id";
+      var response = await get(
+        Uri.parse(url),
+        headers: {'Authorization': 'Bearer $token'},
+      ).timeout(const Duration(seconds: Api.apiTimeOut));
+
+      if (response.statusCode == 200) {
+        var data = jsonDecode(response.body);
+        Get.back();
+        Get.snackbar(
+          "Success",
+          data['message'],
+          backgroundColor: Colors.green,
+          colorText: Colors.white,
+        );
+        await fetchCourse();
+      } else {
+        Get.snackbar(
+          "Error",
+          "Something went wrong",
+          backgroundColor: Colors.red,
+          colorText: Colors.white,
+        );
       }
     } finally {
       isLoading.value = false;
