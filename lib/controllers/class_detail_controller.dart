@@ -9,6 +9,11 @@ class ClassDetailController extends GetxController with GetSingleTickerProviderS
   RxList<ClassNotificationModel> notificationList = <ClassNotificationModel>[].obs;
   RxList<AssignmentPointModel> studentPointList = <AssignmentPointModel>[].obs;
 
+  TextEditingController linkSubmit = TextEditingController();
+  RxBool isLinkSubmitError = false.obs;
+  RxString linkSubmitError = ''.obs;
+  RxBool isSubmitButtonLoading = false.obs;
+
   late TabController tabController;
   final FocusNode searchFocusNode = FocusNode();
   final TextEditingController searchController = TextEditingController();
@@ -97,6 +102,36 @@ class ClassDetailController extends GetxController with GetSingleTickerProviderS
       }
     } finally {
       isLoading.value = false;
+    }
+  }
+
+  void submitAssignment(String type, String id) async {
+    try {
+      isSubmitButtonLoading.value = true;
+      var uri = Uri.parse("${Api.server}assignment/submit");
+      var request = MultipartRequest('POST', uri);
+      request.headers['Authorization'] = 'Bearer $token';
+      request.headers['Content-Type'] = 'application/json';
+      request.headers['Accept'] = 'application/json';
+
+      request.fields['type'] = type;
+      request.fields['assignment_id'] = id;
+      request.fields['link'] = linkSubmit.text.trim();
+      request.fields['class_id'] = classId.value.toString();
+
+      var streamedResponse = await request.send();
+      if (streamedResponse.statusCode == 200) {
+        fetchClassAssignment(classId.value);
+        Get.snackbar('Success', 'Assignment submitted successfully');
+      }
+    } catch (e) {
+      Get.back();
+      Get.snackbar("Error", "Failed to submit assignment");
+      if (kDebugMode) {
+        print(e);
+      }
+    } finally {
+      isSubmitButtonLoading.value = false;
     }
   }
 
