@@ -8,6 +8,7 @@ abstract class Routes {
   static const classListScreen = _Paths.classListScreen;
   static const classDetailScreen = _Paths.classDetailScreen;
   static const courseListScreen = _Paths.courseListScreen;
+  static const courseDetailScreen = _Paths.courseDetailScreen;
   static const doAssignment = _Paths.doAssignment;
 }
 
@@ -17,5 +18,6 @@ abstract class _Paths {
   static const classListScreen = '/class-list-screen';
   static const classDetailScreen = '/class-detail-screen';
   static const courseListScreen = '/course-list-screen';
+  static const courseDetailScreen = '/class-detail';
   static const doAssignment = '/do-assignment';
 }
