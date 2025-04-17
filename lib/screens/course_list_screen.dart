@@ -34,10 +34,7 @@ class CourseListScreen extends GetView<CourseController> {
                                   decoration: BoxDecoration(
                                     color: Colors.transparent,
                                     borderRadius: BorderRadius.circular(50),
-                                    border: Border.all(
-                                      color: AppColors.primary,
-                                      width: 1,
-                                    ),
+                                    border: Border.all(color: AppColors.primary, width: 1),
                                   ),
                                   child: TextField(
                                     focusNode: controller.searchFocusNode,
@@ -48,15 +45,12 @@ class CourseListScreen extends GetView<CourseController> {
                                         color: AppColors.primary,
                                       ),
                                       hintText: "search".tr,
-                                      hintStyle: const TextStyle(
-                                        color: AppColors.secondaryText,
-                                      ),
+                                      hintStyle: const TextStyle(color: AppColors.secondaryText),
                                       border: InputBorder.none,
-                                      contentPadding:
-                                          const EdgeInsets.symmetric(
-                                            vertical: 15,
-                                            horizontal: 10,
-                                          ),
+                                      contentPadding: const EdgeInsets.symmetric(
+                                        vertical: 15,
+                                        horizontal: 10,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -81,11 +75,7 @@ class CourseListScreen extends GetView<CourseController> {
                                     controller.isSearching.value = false;
                                     controller.searchController.clear();
                                   },
-                                  child: const Icon(
-                                    Icons.close,
-                                    color: Colors.black,
-                                    size: 20,
-                                  ),
+                                  child: const Icon(Icons.close, color: Colors.black, size: 20),
                                 ),
                               ),
                             ],
@@ -217,10 +207,7 @@ class CourseListScreen extends GetView<CourseController> {
                           tags
                               .map(
                                 (tag) => Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 10,
-                                    vertical: 5,
-                                  ),
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                                   margin: const EdgeInsets.only(right: 10),
                                   decoration: BoxDecoration(
                                     color: AppColors.primary,
@@ -242,7 +229,26 @@ class CourseListScreen extends GetView<CourseController> {
                 ),
               ),
               CustomButton(
-                onTap: () {},
+                onTap: () {
+                  if (joined) {
+                    Get.toNamed(
+                      Routes.classDetailScreen,
+                      arguments: {'courseId': id, 'courseName': title, 'courseCode': code},
+                    );
+                  } else {
+                    Get.dialog(
+                      NotificationDialogWithCustomButton(
+                        title: 'note'.tr,
+                        message: 'join_course_confirm'.tr,
+                        btnText: 'join'.tr,
+                        btnColor: AppColors.primary,
+                        onTap: () {
+                          controller.joinCourse(id);
+                        },
+                      ),
+                    );
+                  }
+                },
                 btnText: joined ? 'detail'.tr : 'join'.tr,
                 height: 40,
               ),
