@@ -232,8 +232,8 @@ class CourseListScreen extends GetView<CourseController> {
                 onTap: () {
                   if (joined) {
                     Get.toNamed(
-                      Routes.classDetailScreen,
-                      arguments: {'courseId': id, 'courseName': title, 'courseCode': code},
+                      Routes.courseDetailScreen,
+                      arguments: {'courseId': id, 'courseName': title},
                     );
                   } else {
                     Get.dialog(
