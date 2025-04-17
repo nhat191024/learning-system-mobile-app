@@ -14,6 +14,7 @@ export 'package:learning_system/screens/class_detail/assignment_screen.dart';
 export 'package:learning_system/screens/do_assignment_screen.dart';
 export 'package:learning_system/screens/class_detail/point_screen.dart';
 export 'package:learning_system/screens/course_list_screen.dart';
+export 'package:learning_system/screens/course_detail_screen.dart';
 export 'package:learning_system/screens/profile_screen.dart';
 
 //controller imports
@@ -22,6 +23,7 @@ export 'package:learning_system/controllers/class_controller.dart';
 export 'package:learning_system/controllers/class_detail_controller.dart';
 export 'package:learning_system/controllers/bottom_nav_controller.dart';
 export 'package:learning_system/controllers/course_controller.dart';
+export 'package:learning_system/controllers/course_detail_controller.dart';
 export 'package:learning_system/controllers/profile_controller.dart';
 export 'package:learning_system/controllers/do_assignment_controller.dart';
 
@@ -31,6 +33,7 @@ export 'package:learning_system/bindings/class_binding.dart';
 export 'package:learning_system/bindings/class_detail_binding.dart';
 export 'package:learning_system/bindings/bottom_nav_binding.dart';
 export 'package:learning_system/bindings/course_binding.dart';
+export 'package:learning_system/bindings/course_detail_binding.dart';
 export 'package:learning_system/bindings/profile_binding.dart';
 export 'package:learning_system/bindings/do_assignment_binding.dart';
 
@@ -64,8 +67,7 @@ export 'package:learning_system/components/dialog.dart';
 
 //package imports
 export 'dart:convert';
-export 'package:get/get.dart'
-    hide Response, FormData, MultipartFile, HeaderValue;
+export 'package:get/get.dart' hide Response, FormData, MultipartFile, HeaderValue;
 export 'package:flutter_svg/svg.dart';
 // export 'package:flutter_web_plugins/flutter_web_plugins.dart';
 export 'package:http/http.dart';
