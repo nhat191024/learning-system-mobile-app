@@ -10,6 +10,7 @@ class Words extends Translations {
       'detail': 'Detail',
       'logout': 'Logout',
       'note': 'Note!',
+      'status': 'Status',
 
       //login screen
       'login': 'Login',
@@ -39,18 +40,27 @@ class Words extends Translations {
       'points': 'Points',
 
       //assignment screen
+      'start': 'Start',
+      'hand_in': 'Hand in',
+      'handed': 'Handed',
       'due': 'Due',
       'duration': 'Duration',
       'm': 'm',
       'overdue': 'Overdue',
+      'submit_assignment': 'Submit assignment',
+      'assignment_link': 'Assignment link',
+      'enter_link': 'Enter link',
+      'link_required': 'Link is required',
 
       //do assignment screen
       'Candidate': 'Candidate',
       'time_left': 'Time left',
       'submit': 'Submit',
       'time_up': 'Time is up!',
-      'time_up_message': 'System will submit your assignment automatically in 3 seconds. Please wait...',
-      'submit_confirm': "You haven't finished your assignment yet, are you sure you want to submit it?",
+      'time_up_message':
+          'System will submit your assignment automatically in 3 seconds. Please wait...',
+      'submit_confirm':
+          "You haven't finished your assignment yet, are you sure you want to submit it?",
       'submit_confirm_1': 'Are you sure you want to submit it?',
 
       //point screen
@@ -69,7 +79,6 @@ class Words extends Translations {
       'name': 'Name',
       'gender': 'Gender',
       'role': 'Role',
-      'status': 'Status',
       'created_at': 'Created At',
       'updated_at': 'Updated At',
     },
@@ -79,6 +88,8 @@ class Words extends Translations {
       'join': 'Tham gia',
       'detail': 'Chi tiết',
       'logout': 'Đăng xuất',
+      'note': 'Lưu ý!',
+      'status': 'Status',
 
       //login screen
       'login': 'Đăng nhập',
@@ -108,10 +119,17 @@ class Words extends Translations {
       'points': 'Điểm số',
 
       //assignment screen
+      'start': 'Bắt đầu',
+      'hand_in': 'Nộp bài',
+      'handed': 'Đã nộp',
       'due': 'Hạn nộp',
       'duration': 'Thời gian',
       'm': 'p',
       'overdue': 'Quá hạn',
+      'submit_assignment': 'Nộp bài tập',
+      'assignment_link': 'Link bài tập',
+      'enter_link': 'Nhập link',
+      'link_required': 'Link không được để trống',
 
       //do assignment screen
       'Candidate': 'Thí sinh',
@@ -138,7 +156,6 @@ class Words extends Translations {
       'name': 'Tên',
       'gender': 'Giới tính',
       'role': 'Vai trò',
-      'status': 'Trạng thái',
       'created_at': 'Ngày tạo',
       'updated_at': 'Ngày cập nhật',
     },
