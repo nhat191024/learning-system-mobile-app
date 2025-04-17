@@ -7,6 +7,7 @@ class Words extends Translations {
       //common
       'search': 'Search',
       'join': 'Join',
+      'close': 'Close',
       'detail': 'Detail',
       'logout': 'Logout',
       'note': 'Note!',
@@ -71,6 +72,7 @@ class Words extends Translations {
       //course list screen
       'course_list': 'Course List',
       'course_list_empty': 'No course found',
+      'join_course_confirm': 'Are you sure you want to join this course?',
 
       //profile screen
       'my_profile': 'My Profile',
@@ -86,6 +88,7 @@ class Words extends Translations {
       //common
       'search': 'Tìm kiếm',
       'join': 'Tham gia',
+      'close': 'Đóng',
       'detail': 'Chi tiết',
       'logout': 'Đăng xuất',
       'note': 'Lưu ý!',
@@ -148,6 +151,7 @@ class Words extends Translations {
       //course list screen
       'course_list': 'Danh sách khoá học',
       'course_list_empty': 'Không tìm thấy khoá học nào',
+      'join_course_confirm': 'Bạn có chắc chắn muốn tham gia khoá học này không?',
 
       //profile screen
       'my_profile': 'Hồ sơ của tôi',
