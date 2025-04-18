@@ -10,6 +10,7 @@ abstract class Routes {
   static const courseListScreen = _Paths.courseListScreen;
   static const courseDetailScreen = _Paths.courseDetailScreen;
   static const doAssignment = _Paths.doAssignment;
+  static const doCourseAssignment = _Paths.doCourseAssignment;
 }
 
 abstract class _Paths {
@@ -20,4 +21,5 @@ abstract class _Paths {
   static const courseListScreen = '/course-list-screen';
   static const courseDetailScreen = '/class-detail';
   static const doAssignment = '/do-assignment';
+  static const doCourseAssignment = '/do-course-assignment';
 }
