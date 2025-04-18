@@ -17,6 +17,7 @@ export 'package:learning_system/screens/course_list_screen.dart';
 export 'package:learning_system/screens/course_detail_screen.dart';
 export 'package:learning_system/screens/course_detail/course_assignment.dart';
 export 'package:learning_system/screens/course_detail/course_point.dart';
+export 'package:learning_system/screens/do_course_assignment_screen.dart';
 export 'package:learning_system/screens/profile_screen.dart';
 
 //controller imports
@@ -28,6 +29,7 @@ export 'package:learning_system/controllers/course_controller.dart';
 export 'package:learning_system/controllers/course_detail_controller.dart';
 export 'package:learning_system/controllers/profile_controller.dart';
 export 'package:learning_system/controllers/do_assignment_controller.dart';
+export 'package:learning_system/controllers/do_course_assignment_controller.dart';
 
 //binding imports
 export 'package:learning_system/bindings/login_binding.dart';
@@ -38,6 +40,7 @@ export 'package:learning_system/bindings/course_binding.dart';
 export 'package:learning_system/bindings/course_detail_binding.dart';
 export 'package:learning_system/bindings/profile_binding.dart';
 export 'package:learning_system/bindings/do_assignment_binding.dart';
+export 'package:learning_system/bindings/do_course_assignment_binding.dart';
 
 //utils imports
 export 'package:learning_system/routes/pages.dart';
@@ -80,3 +83,4 @@ export 'package:sidebarx/sidebarx.dart';
 export 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 export 'package:flutter_native_splash/flutter_native_splash.dart';
 export 'package:flutter/foundation.dart';
+export 'package:url_launcher/url_launcher.dart';
