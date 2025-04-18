@@ -28,7 +28,7 @@ class CourseAssignmentModel {
 
   CourseAssignmentModel.fromMap(Map<String, dynamic> map) {
     id = map['id'];
-    videoUrl = map['videoUrl'];
+    videoUrl = map['video_url'];
     title = map['title'];
     description = map['description'];
     duration = map['duration'];
