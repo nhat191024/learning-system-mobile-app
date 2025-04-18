@@ -15,6 +15,8 @@ export 'package:learning_system/screens/do_assignment_screen.dart';
 export 'package:learning_system/screens/class_detail/point_screen.dart';
 export 'package:learning_system/screens/course_list_screen.dart';
 export 'package:learning_system/screens/course_detail_screen.dart';
+export 'package:learning_system/screens/course_detail/course_assignment.dart';
+export 'package:learning_system/screens/course_detail/course_point.dart';
 export 'package:learning_system/screens/profile_screen.dart';
 
 //controller imports
@@ -59,6 +61,8 @@ export 'package:learning_system/models/class_notification_model.dart';
 export 'package:learning_system/models/assignment_point_model.dart';
 export 'package:learning_system/models/question_model.dart';
 export 'package:learning_system/models/answer_model.dart';
+export 'package:learning_system/models/course_assignment_model.dart';
+export 'package:learning_system/models/course_assignment_point_model.dart';
 
 //components imports
 export 'package:learning_system/components/button.dart';
