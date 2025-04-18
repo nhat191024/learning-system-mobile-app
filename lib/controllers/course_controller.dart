@@ -62,7 +62,7 @@ class CourseController extends GetxController {
   joinCourse(int id) async {
     try {
       isLoading.value = true;
-      String url = "${Api.testServer}courses/join/$id";
+      String url = "${Api.server}courses/join/$id";
       var response = await get(
         Uri.parse(url),
         headers: {'Authorization': 'Bearer $token'},

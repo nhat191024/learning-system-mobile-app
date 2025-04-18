@@ -58,7 +58,7 @@ class DoCourseAssignmentController extends GetxController {
   fetchAssignment(int assignmentId) async {
     try {
       isLoading(true);
-      String url = "${Api.testServer}courses/assignment/detail/$assignmentId";
+      String url = "${Api.server}courses/assignment/detail/$assignmentId";
       var response = await get(
         Uri.parse(url),
         headers: {'Authorization': 'Bearer $token'},
@@ -180,7 +180,7 @@ class DoCourseAssignmentController extends GetxController {
         return;
       }
 
-      String url = "${Api.testServer}courses/assignment/submit";
+      String url = "${Api.server}courses/assignment/submit";
       var request = MultipartRequest('POST', Uri.parse(url));
       request.headers['Authorization'] = 'Bearer $token';
       request.headers['Content-Type'] = 'application/json';

@@ -29,7 +29,7 @@ class CourseDetailController extends GetxController with GetSingleTickerProvider
     assignmentList.clear();
     try {
       isLoading.value = true;
-      String url = "${Api.testServer}courses/assignment/$id";
+      String url = "${Api.server}courses/assignment/$id";
       var response = await get(
         Uri.parse(url),
         headers: {'Authorization': 'Bearer $token'},
@@ -53,7 +53,7 @@ class CourseDetailController extends GetxController with GetSingleTickerProvider
     studentPointList.clear();
     try {
       isLoading.value = true;
-      String url = "${Api.testServer}courses/assignment/point/$id";
+      String url = "${Api.server}courses/assignment/point/$id";
       var response = await get(
         Uri.parse(url),
         headers: {'Authorization': 'Bearer $token'},
