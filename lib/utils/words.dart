@@ -12,6 +12,7 @@ class Words extends Translations {
       'logout': 'Logout',
       'note': 'Note!',
       'status': 'Status',
+      'error': 'Error',
 
       //login screen
       'login': 'Login',
@@ -74,6 +75,12 @@ class Words extends Translations {
       'course_list_empty': 'No course found',
       'join_course_confirm': 'Are you sure you want to join this course?',
 
+      //course detail screen
+      'course_detail': 'Course Detail',
+      'assignment_already_submitted': 'You have already submitted this assignment',
+      'assignment_notification':
+          'Before doing the assignment, you should watch the lecture video to understand the content of the lesson!!.',
+
       //profile screen
       'my_profile': 'My Profile',
       'avatar': 'Avatar',
@@ -92,7 +99,8 @@ class Words extends Translations {
       'detail': 'Chi tiết',
       'logout': 'Đăng xuất',
       'note': 'Lưu ý!',
-      'status': 'Status',
+      'status': 'Trạng thái',
+      'error': 'Lỗi',
 
       //login screen
       'login': 'Đăng nhập',
@@ -152,6 +160,12 @@ class Words extends Translations {
       'course_list': 'Danh sách khoá học',
       'course_list_empty': 'Không tìm thấy khoá học nào',
       'join_course_confirm': 'Bạn có chắc chắn muốn tham gia khoá học này không?',
+
+      //course detail screen
+      'course_detail': 'Chi tiết khoá học',
+      'assignment_already_submitted': 'Bạn đã nộp bài tập này rồi',
+      'assignment_notification':
+          'Trước khi làm bài tập, bạn nên xem video bài giảng để hiểu rõ hơn về nội dung bài học!!.',
 
       //profile screen
       'my_profile': 'Hồ sơ của tôi',
