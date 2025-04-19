@@ -281,7 +281,13 @@ class ProfileScreen extends GetView<ProfileController> {
 
                         const SizedBox(height: 40),
 
-                        CustomButton(onTap: () {}, btnText: 'logout'.tr, width: Get.width),
+                        CustomButton(
+                          onTap: () async {
+                            controller.logout();
+                          },
+                          btnText: 'logout'.tr,
+                          width: Get.width,
+                        ),
                       ],
                     ),
                   );
