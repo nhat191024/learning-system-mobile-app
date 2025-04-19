@@ -43,9 +43,7 @@ class ProfileScreen extends GetView<ProfileController> {
                         Container(
                           height: 140,
                           width: 140,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                          ),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
                           clipBehavior: Clip.antiAlias,
                           child: Image.network(
                             controller.profile.value.avatar ?? '',
@@ -55,39 +53,100 @@ class ProfileScreen extends GetView<ProfileController> {
 
                         const SizedBox(height: 15),
 
-                        Text(
-                          'name'.tr,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
                         Container(
-                          height: 40,
+                          height: 120,
                           width: double.infinity,
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                           decoration: BoxDecoration(
-                            color: AppColors.primary,
+                            color: AppColors.white,
                             borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: AppColors.primary),
                           ),
-                          child: Row(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(
-                                Icons.person,
-                                color: AppColors.primaryTextLight,
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.person, color: AppColors.primary),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    '${'name'.tr}:',
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    controller.profile.value.name ?? '',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              const SizedBox(width: 10),
-                              Text(
-                                controller.profile.value.name ?? '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primaryTextLight,
-                                ),
+                              const SizedBox(height: 5),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    controller.profile.value.gender == 'male'
+                                        ? Icons.male
+                                        : Icons.female,
+                                    color: AppColors.primaryText,
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    '${'gender'.tr}:',
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    controller.profile.value.gender ?? '',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 5),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.email, color: AppColors.primaryText),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    '${'email'.tr}:',
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    controller.profile.value.email ?? '',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -95,243 +154,126 @@ class ProfileScreen extends GetView<ProfileController> {
 
                         const SizedBox(height: 15),
 
-                        Text(
-                          'email'.tr,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
                         Container(
-                          height: 40,
+                          height: 160,
                           width: double.infinity,
                           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                           decoration: BoxDecoration(
-                            color: AppColors.primary,
+                            color: AppColors.white,
                             borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: AppColors.primary),
                           ),
-                          child: Row(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(
-                                Icons.email,
-                                color: AppColors.primaryTextLight,
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    controller.profile.value.role == 'student'
+                                        ? Icons.school
+                                        : Icons.work,
+                                    color: AppColors.primary,
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    '${'role'.tr}:',
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    controller.profile.value.role ?? '',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              const SizedBox(width: 10),
-                              Text(
-                                controller.profile.value.email ?? '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primaryTextLight,
-                                ),
+                              const SizedBox(height: 5),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.verified_user, color: AppColors.primaryText),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    '${'status'.tr}:',
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    controller.profile.value.status ?? '',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 15),
-
-                        Text(
-                          'gender'.tr,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
-                        Container(
-                          height: 40,
-                          width: double.infinity,
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                          decoration: BoxDecoration(
-                            color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                controller.profile.value.gender == 'male'
-                                    ? Icons.male
-                                    : Icons.female,
-                                color: AppColors.primaryTextLight,
+                              const SizedBox(height: 5),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.date_range, color: AppColors.primaryText),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    '${'created_at'.tr}:',
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    controller.profile.value.createdAt ?? '',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              const SizedBox(width: 10),
-                              Text(
-                                controller.profile.value.gender ?? '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primaryTextLight,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 15),
-
-                        Text(
-                          'role'.tr,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
-                        Container(
-                          height: 40,
-                          width: double.infinity,
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                          decoration: BoxDecoration(
-                            color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                controller.profile.value.role == 'student'
-                                    ? Icons.school
-                                    : Icons.work,
-                                color: AppColors.primaryTextLight,
-                              ),
-                              const SizedBox(width: 10),
-                              Text(
-                                controller.profile.value.role ?? '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primaryTextLight,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 15),
-
-                        Text(
-                          'status'.tr,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
-                        Container(
-                          height: 40,
-                          width: double.infinity,
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                          decoration: BoxDecoration(
-                            color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.verified_user,
-                                color: AppColors.primaryTextLight,
-                              ),
-                              const SizedBox(width: 10),
-                              Text(
-                                controller.profile.value.status ?? '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primaryTextLight,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 15),
-
-                        Text(
-                          'created_at'.tr,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
-                        Container(
-                          height: 40,
-                          width: double.infinity,
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                          decoration: BoxDecoration(
-                            color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.date_range,
-                                color: AppColors.primaryTextLight,
-                              ),
-                              const SizedBox(width: 10),
-                              Text(
-                                controller.profile.value.createdAt ?? '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primaryTextLight,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 15),
-
-                        Text(
-                          'updated_at'.tr,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
-                        Container(
-                          height: 40,
-                          width: double.infinity,
-                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                          decoration: BoxDecoration(
-                            color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center, 
-                            children: [
-                              Icon(
-                                Icons.date_range,
-                                color: AppColors.primaryTextLight,
-                              ),
-                              const SizedBox(width: 10),
-                              Text(
-                                controller.profile.value.updatedAt ?? '',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primaryTextLight,
-                                ),
+                              const SizedBox(height: 5),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.date_range, color: AppColors.primaryText),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    '${'updated_at'.tr}:',
+                                    textAlign: TextAlign.start,
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Text(
+                                    controller.profile.value.updatedAt ?? '',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -339,11 +281,7 @@ class ProfileScreen extends GetView<ProfileController> {
 
                         const SizedBox(height: 40),
 
-                        CustomButton(
-                          onTap: () {},
-                          btnText: 'logout'.tr,
-                          width: Get.width,
-                        ),
+                        CustomButton(onTap: () {}, btnText: 'logout'.tr, width: Get.width),
                       ],
                     ),
                   );
