@@ -57,4 +57,46 @@ class ProfileController extends GetxController {
       isLoading.value = false;
     }
   }
+
+  logout() async {
+    try {
+      String url = "${Api.server}logout";
+      var response = await get(
+        Uri.parse(url),
+        headers: {'Authorization': 'Bearer $token'},
+      ).timeout(const Duration(seconds: Api.apiTimeOut));
+      if (response.statusCode == 200) {
+        var data = jsonDecode(response.body);
+        var message = data['message'];
+
+        if (kDebugMode) {
+          print("Logout:");
+          print("Status code: ${response.statusCode}");
+          print("Message: $message");
+        }
+
+        if (message == "Đăng xuất thành công.") {
+          StorageService.removeData(key: LocalStorageKeys.token);
+          StorageService.removeData(key: 'username');
+          StorageService.removeData(key: 'avatar');
+          StorageService.removeData(key: 'isLogin');
+          StorageService.removeData(key: 'role');
+          Get.offAllNamed(Routes.loginScreen);
+        }
+      } else {
+        Get.snackbar(
+          "error".tr,
+          "logout_error".tr,
+          backgroundColor: Colors.red,
+          colorText: Colors.white,
+          duration: const Duration(seconds: 2),
+          snackPosition: SnackPosition.TOP,
+        );
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print("Logout error: $e");
+      }
+    }
+  }
 }
